@@ -1,0 +1,5 @@
+06.04.2021|/var/www/test.fc/App/Db.php|Ошибка SQL запроса!!!
+06.04.2021|/var/www/test.fc/App/Db.php|Ошибка подключения к БД!!!
+22.09.2021|/var/www/html/App/Db.php|Ошибка подключения к БД!!!
+28.09.2021|/var/www/html/App/Db.php|Ошибка подключения к БД!!!
+28.09.2021|/var/www/html/App/Db.php|Ошибка подключения к БД!!!
