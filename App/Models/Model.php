@@ -74,4 +74,25 @@ abstract class Model
          $db->execute($sql, $values);
          $this->id = $db->getLastId();
       }
+      /**
+       * Функция обновляет существующую запись в таблице
+       */
+      public function update()
+      {
+         $columns = [];
+         $values = [];
+         foreach ($this as $key => $value) {
+            $values[':' . $key] = $value;
+            if ('id' == $key) {
+               continue;
+            }
+            $columns[] = $key . '=:' . $key;
+         }
+         $sql = 'UPDATE ' . static::TABLE .
+                ' SET ' 
+                . implode(',', $columns) . 
+                ' WHERE id=:id';
+         $db = new Db();
+         $db->execute($sql, $values);
+      }
 }
