@@ -27,7 +27,7 @@ abstract class Model
     * @param $id integer
     * @return bool | object
     */
-   public static function findById($id): int
+   public static function findById($id): bool|object
    {
       $db = Db::instance();
       $class = static::class;
