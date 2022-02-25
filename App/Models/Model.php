@@ -6,7 +6,7 @@ use App\Resources\Db;
 
 abstract class Model
 {
-   const TABLE = '';
+   protected const TABLE = '';
    public $id;
 
    /**
