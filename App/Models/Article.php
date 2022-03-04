@@ -4,9 +4,10 @@ namespace App\Models;
 
 class Article extends Model
 {
-    public const TABLE = 'news';
+    protected const TABLE = 'news';
 
     public $id;
+    public $title;
     public $content;
     public $author;
 
