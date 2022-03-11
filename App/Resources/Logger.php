@@ -4,7 +4,7 @@ namespace App\Resources;
 
 class Logger
 {
-    protected static $path = __DIR__ . './Log.txt';
+    protected static $path = __DIR__ . '/Log.txt';
 
     public static function writeLog(\Exception $ex)
     {
