@@ -1,2 +1,2 @@
-
-
+12.03.2022|/var/www/html/App/Resources/Db.php|Ошибка подключения к БД!!!
+12.03.2022|/var/www/html/App/Resources/Db.php|Ошибка подключения к БД!!!
