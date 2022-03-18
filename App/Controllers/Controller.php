@@ -6,7 +6,7 @@ use App\View\View;
 
 abstract class Controller
 {
-    protected $vew;
+    protected $view;
     abstract protected function handle();
 
     public function __construct()
