@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+
+  apache:
+    image: httpd:2.4
+    container_name: apache-admin      
+    volumes:
+      - ./../../ADMIN_PANEL:/var/www/html
+      - ./configs/httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    depends_on:
+      - php  
+
+  
+  php:
+    build:
+      context: php
+    container_name: php-admin  
+    ports:
+      - 127.0.0.1:83:80
+    volumes:
+      - ./../../ADMIN_PANEL:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+    depends_on:
+      - mysql
+      
+  
+  mysql:
+    image: mariadb:10.7
+    container_name: mysql-admin
+    ports:
+      - 127.0.0.1:6033:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+    volumes:
+    - ./databases/mysql:/var/lib/mysql
+
+  adminphp:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: adminphp-admin
+    links: 
+      - mysql:db
+    ports:
+      - 127.0.0.1:777:80
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+    depends_on:
+      - mysql
+ 

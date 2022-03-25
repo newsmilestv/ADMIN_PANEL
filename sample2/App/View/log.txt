@@ -1,3 +1,0 @@
-21.04.2021|/srv/http/admin.sc/App/View/Db.php|Ошибка SQL запроса!!!
-21.04.2021|/srv/http/admin.sc/App/View/Db.php|Ошибка подключения к БД!!!
-18.08.2021|/var/www/html/admin.sc/App/View/Db.php|Ошибка подключения к БД!!!

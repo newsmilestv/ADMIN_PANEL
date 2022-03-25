@@ -52,7 +52,7 @@ class View implements \Countable, \Iterator
      * The return value is cast to an integer.
      * @since 5.1.0
      */
-    public function count() : int
+    public function count()
     {
         return count($this->data);
     }
@@ -63,7 +63,7 @@ class View implements \Countable, \Iterator
      * @return mixed Can return any type.
      * @since 5.0.0
      */
-    public function current() : mixed
+    public function current()
     {
         return $this->data[$this->keys[$this->pos]];
     }
@@ -74,7 +74,7 @@ class View implements \Countable, \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function next() : void
+    public function next()
     {
         ++$this->pos;
     }
@@ -85,7 +85,7 @@ class View implements \Countable, \Iterator
      * @return mixed scalar on success, or null on failure.
      * @since 5.0.0
      */
-    public function key() : mixed
+    public function key()
     {
         return $this->pos;
     }
@@ -97,7 +97,7 @@ class View implements \Countable, \Iterator
      * Returns true on success or false on failure.
      * @since 5.0.0
      */
-    public function valid() : bool
+    public function valid()
     {
         return isset($this->keys[$this->pos]);
     }
@@ -108,7 +108,7 @@ class View implements \Countable, \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function rewind() : void
+    public function rewind()
     {
         $this->pos = 0;
         $this->keys = array_keys($this->data);
